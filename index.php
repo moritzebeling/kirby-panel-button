@@ -14,7 +14,7 @@ Kirby::plugin('moritzebeling/kirby-panel-button', [
                 'url' => function (string $url) {
                     return $url;
                 },
-                'theme' => function (string $theme = 'info') {
+                'theme' => function (string $theme = null) {
                     return $theme;
                 },
                 'icon' => function (string $icon = 'refresh') {
