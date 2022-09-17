@@ -1,18 +1,26 @@
 <template>
     <k-field class="k-button-field" :label="label">
-        <p>Some optional text</p>
-        <button>Click here to trigger webhook</button>
+        <div>
+
+            <p v-if="text">{{text}}</p>
+            <button>Click here to trigger webhook {{url}}</button>
+            
+        </div>
     </k-field>
 </template>
 
 <script>
     export default {
         props: {
-            label: String
+            label: String,
+            text: String,
+            url: String,
         }
     }
 </script>
 
 <style>
-  /* optional scoped styles for the component */
+  p {
+
+  }
 </style>

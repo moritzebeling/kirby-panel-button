@@ -7,6 +7,12 @@ Kirby::plugin('moritzebeling/kirby-panel-button', [
             'props' => [
                 'label' => function (string $label = 'Button') {
                     return $label;
+                },
+                'text' => function (string $text = null) {
+                    return $text;
+                },
+                'url' => function (string $url) {
+                    return $url;
                 }
             ]
         ]

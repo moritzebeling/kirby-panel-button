@@ -57,12 +57,14 @@
   }
   const _sfc_main = {
     props: {
-      label: String
+      label: String,
+      text: String,
+      url: String
     }
   };
   var _sfc_render = function render() {
     var _vm = this, _c = _vm._self._c;
-    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("p", [_vm._v("Some optional text")]), _c("button", [_vm._v("Click here to trigger webhook")])]);
+    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("div", [_vm.text ? _c("p", [_vm._v(_vm._s(_vm.text))]) : _vm._e(), _c("button", [_vm._v("Click here to trigger webhook " + _vm._s(_vm.url))])])]);
   };
   var _sfc_staticRenderFns = [];
   _sfc_render._withStripped = true;
