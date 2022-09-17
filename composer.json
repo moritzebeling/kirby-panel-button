@@ -1,0 +1,35 @@
+{
+  "name": "moritzebeling/kirby-panel-button",
+  "description": "Button field to trigger a webhook",
+  "homepage": "https://github.com/moritzebeling/kirby-panel-button",
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "kirby-plugin",
+  "require": {
+    "php": ">=7.4.0",
+    "getkirby/composer-installer": "^1.1"
+  },
+  "authors": [
+    {
+      "name": "Moritz Ebeling",
+      "homepage": "https://moritzebeling.com"
+    }
+  ],
+  "keywords": [
+    "kirby",
+    "plugin",
+    "button",
+    "field",
+    "blueprint",
+    "panel",
+    "webhook",
+    "trigger",
+    "kirby-plugin",
+    "kirby-cms",
+    "php"
+  ],
+  "support": {
+    "issues": "https://github.com/moritzebeling/kirby-panel-button/issues",
+    "source": "https://github.com/moritzebeling/kirby-panel-button"
+  }
+}
