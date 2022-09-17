@@ -4,11 +4,7 @@
 
             <p v-if="text">{{text}}</p>
 
-            <div class="k-button-field-button-wrapper" :data-theme="theme">
-                <div class="k-button-field-button-inner">
-                    <k-button :icon="icon">{{ button }}</k-button>
-                </div>
-            </div>
+            <k-button :icon="icon">{{ button }}</k-button>
             
         </div>
     </k-field>

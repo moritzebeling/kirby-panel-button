@@ -8,10 +8,7 @@ Kirby::plugin('moritzebeling/kirby-panel-button', [
                 'label' => function (string $label = 'Button') {
                     return $label;
                 },
-                'text' => function (string $text = null) {
-                    return $text;
-                },
-                'button' => function (string $text = 'Click here') {
+                'text' => function (string $text = 'Click here') {
                     return $text;
                 },
                 'url' => function (string $url) {

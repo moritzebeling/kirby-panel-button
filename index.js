@@ -59,7 +59,6 @@
     props: {
       label: String,
       text: String,
-      button: String,
       url: String,
       theme: String,
       icon: String
@@ -67,7 +66,7 @@
   };
   var _sfc_render$1 = function render() {
     var _vm = this, _c = _vm._self._c;
-    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("div", { staticClass: "k-box", attrs: { "data-theme": _vm.theme } }, [_vm.text ? _c("p", [_vm._v(_vm._s(_vm.text))]) : _vm._e(), _c("div", { staticClass: "k-button-field-button-wrapper", attrs: { "data-theme": _vm.theme } }, [_c("div", { staticClass: "k-button-field-button-inner" }, [_c("k-button", { attrs: { "icon": _vm.icon } }, [_vm._v(_vm._s(_vm.button))])], 1)])])]);
+    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("div", { staticClass: "k-button-field-button-wrapper" }, [_c("button", { staticClass: "k-button-field-button k-button k-box", attrs: { "type": "button", "data-theme": _vm.info } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": _vm.icon } }), _c("span", { staticClass: "k-button-text" }, [_vm._v(_vm._s(_vm.text))])], 1)])]);
   };
   var _sfc_staticRenderFns$1 = [];
   _sfc_render$1._withStripped = true;
@@ -103,7 +102,7 @@
   };
   var _sfc_render = function render() {
     var _vm = this, _c = _vm._self._c;
-    return _c("k-field", { staticClass: "k-button-section", attrs: { "label": _vm.headline } }, [_c("div", { staticClass: "k-box", attrs: { "data-theme": _vm.theme } }, [_vm.text ? _c("p", [_vm._v(_vm._s(_vm.text))]) : _vm._e(), _c("div", { staticClass: "k-button-field-button-wrapper", attrs: { "data-theme": _vm.theme } }, [_c("div", { staticClass: "k-button-field-button-inner" }, [_c("k-button", { attrs: { "icon": _vm.icon } }, [_vm._v(_vm._s(_vm.button))])], 1)])])]);
+    return _c("k-field", { staticClass: "k-button-section", attrs: { "label": _vm.headline } }, [_c("div", { staticClass: "k-box", attrs: { "data-theme": _vm.theme } }, [_vm.text ? _c("p", [_vm._v(_vm._s(_vm.text))]) : _vm._e(), _c("k-button", { attrs: { "icon": _vm.icon } }, [_vm._v(_vm._s(_vm.button))])], 1)]);
   };
   var _sfc_staticRenderFns = [];
   _sfc_render._withStripped = true;
