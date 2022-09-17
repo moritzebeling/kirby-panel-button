@@ -19,6 +19,9 @@ Kirby::plugin('moritzebeling/kirby-panel-button', [
                 },
                 'icon' => function (string $icon = 'refresh') {
                     return $icon;
+                },
+                'open' => function (bool $open = false) {
+                    return $open;
                 }
             ]
         ]

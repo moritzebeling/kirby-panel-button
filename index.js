@@ -61,12 +61,22 @@
       text: String,
       url: String,
       theme: String,
-      icon: String
+      icon: String,
+      open: Boolean
+    },
+    methods: {
+      onClick() {
+        if (this.open === true) {
+          window.open(this.url, "_blank");
+        } else {
+          console.log("Trigger webhook", this.url);
+        }
+      }
     }
   };
   var _sfc_render$1 = function render() {
     var _vm = this, _c = _vm._self._c;
-    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("div", { staticClass: "k-button-field-button-wrapper" }, [_c("button", { staticClass: "k-button-field-button k-button k-box", attrs: { "type": "button", "data-theme": _vm.theme } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": _vm.icon } }), _c("span", { staticClass: "k-button-text" }, [_vm._v(_vm._s(_vm.text))])], 1)])]);
+    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("div", { staticClass: "k-button-field-button-wrapper" }, [_c("button", { staticClass: "k-button-field-button k-button k-box", attrs: { "type": "button", "data-theme": _vm.theme }, on: { "click": _vm.onClick } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": _vm.icon } }), _c("span", { staticClass: "k-button-text" }, [_vm._v(_vm._s(_vm.text))])], 1)])]);
   };
   var _sfc_staticRenderFns$1 = [];
   _sfc_render$1._withStripped = true;
