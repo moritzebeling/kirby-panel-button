@@ -59,13 +59,15 @@
     props: {
       label: String,
       text: String,
+      button: String,
       url: String,
-      theme: String
+      theme: String,
+      icon: String
     }
   };
   var _sfc_render = function render() {
     var _vm = this, _c = _vm._self._c;
-    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("div", { staticClass: "k-box", attrs: { "data-theme": _vm.theme } }, [_vm.text ? _c("p", [_vm._v(_vm._s(_vm.text))]) : _vm._e(), _c("button", [_vm._v("Click here to trigger webhook " + _vm._s(_vm.url))])])]);
+    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("div", { staticClass: "k-box", attrs: { "data-theme": _vm.theme } }, [_vm.text ? _c("p", [_vm._v(_vm._s(_vm.text))]) : _vm._e(), _c("div", { staticClass: "k-button-field-button-wrapper", attrs: { "data-theme": _vm.theme } }, [_c("div", { staticClass: "k-button-field-button-inner" }, [_c("k-button", { attrs: { "icon": _vm.icon } }, [_vm._v(_vm._s(_vm.button))])], 1)])])]);
   };
   var _sfc_staticRenderFns = [];
   _sfc_render._withStripped = true;

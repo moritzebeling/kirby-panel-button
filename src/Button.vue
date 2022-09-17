@@ -3,7 +3,12 @@
         <div class="k-box" :data-theme="theme">
 
             <p v-if="text">{{text}}</p>
-            <button>Click here to trigger webhook {{url}}</button>
+
+            <div class="k-button-field-button-wrapper" :data-theme="theme">
+                <div class="k-button-field-button-inner">
+                    <k-button :icon="icon">{{ button }}</k-button>
+                </div>
+            </div>
             
         </div>
     </k-field>
@@ -14,14 +19,18 @@
         props: {
             label: String,
             text: String,
+            button: String,
             url: String,
             theme: String,
+            icon: String,
         }
     }
 </script>
 
 <style>
-  p {
 
-  }
+    p {
+        margin-bottom: var(--spacing-2);
+    }
+
 </style>
