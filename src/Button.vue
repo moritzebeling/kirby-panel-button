@@ -1,6 +1,6 @@
 <template>
     <k-field class="k-button-field" :label="label">
-        <div>
+        <div class="k-box" :data-theme="theme">
 
             <p v-if="text">{{text}}</p>
             <button>Click here to trigger webhook {{url}}</button>
@@ -15,6 +15,7 @@
             label: String,
             text: String,
             url: String,
+            theme: String,
         }
     }
 </script>

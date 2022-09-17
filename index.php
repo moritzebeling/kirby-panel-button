@@ -13,6 +13,9 @@ Kirby::plugin('moritzebeling/kirby-panel-button', [
                 },
                 'url' => function (string $url) {
                     return $url;
+                },
+                'theme' => function (string $theme = 'info') {
+                    return $theme;
                 }
             ]
         ]
