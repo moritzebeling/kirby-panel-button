@@ -19,17 +19,22 @@
             url: String,
             theme: String,
             icon: String,
-            open: Boolean,
+            open: Boolean
         },
         methods: {
-            onClick(){
+            async onClick(){
                 if( this.open === true ){
                     /*
                     open url in new tab
                     */
                     window.open( this.url, '_blank' );
                 } else {
-                    console.log( 'Trigger webhook', this.url );
+                    /*
+                    trigger webhook
+                    */
+                    fetch( this.url )
+                        .then((response) => response.json())
+                        .then((data) => console.log(data));
                 }
             }
         }

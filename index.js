@@ -65,11 +65,11 @@
       open: Boolean
     },
     methods: {
-      onClick() {
+      async onClick() {
         if (this.open === true) {
           window.open(this.url, "_blank");
         } else {
-          console.log("Trigger webhook", this.url);
+          fetch(this.url).then((response) => response.json()).then((data) => console.log(data));
         }
       }
     }
