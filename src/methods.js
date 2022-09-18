@@ -15,10 +15,12 @@ export function triggerWebhook( field ){
 
             field.isLoading = false;
             console.log('Button field', 'Webhook successfully triggered', data);
+
+            console.log( field );
             
             if( field.reload === true ){
                 setTimeout(() => {
-                    location.reload();
+                    field.$reload();
                 }, 50);
             }
 

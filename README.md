@@ -10,7 +10,6 @@ This plugin is work in progress and will propably change in the near future. Ple
 
 **To Do**
 
-- [ ] Refresh page data on success without reloading the whole page
 - [ ] Add multilang support
 
 **Ideas for version 2**
@@ -44,6 +43,7 @@ myWebhookButton:
   label: Refresh data
   text: Refresh
   url: /fetch-data
+  theme: positive
   reload: true # trigger a page refresh on success to display updated data
 ```
 
