@@ -8,9 +8,14 @@
                 <span class="k-button-text">{{ text }}</span>
             </button>
             
-            <div v-if="isLoading" type="button" class="k-button-field-button k-button k-button-disabled k-box" data-disabled="true">
+            <div v-if="isLoading && !hasError" type="button" class="k-button-field-button k-button k-button-disabled k-box" data-disabled="true">
                 <k-icon type="dots" class="k-button-icon" />
                 <span class="k-button-text">Please wait</span>
+            </div>
+            
+            <div v-if="hasError" type="button" class="k-button-field-button k-button k-button-disabled k-box" data-disabled="true" data-theme="negative">
+                <k-icon type="alert" class="k-button-icon" />
+                <span class="k-button-text">Error</span>
             </div>
 
         </div>
@@ -19,6 +24,9 @@
 </template>
 
 <script>
+
+    import { openUrlInNewTab, triggerWebhook } from "./methods";
+
     export default {
         props: {
             label: String,
@@ -27,7 +35,8 @@
             theme: String,
             icon: String,
             open: Boolean,
-            isLoading: true
+            isLoading: true,
+            hasError: false
         },
         methods: {
             async onClick(){
@@ -35,20 +44,12 @@
                     /*
                     open url in new tab
                     */
-                    console.log('Button field', 'Open link in new tab', this.url);
-                    window.open( this.url, '_blank' );
+                    openUrlInNewTab( this );
                 } else {
                     /*
                     trigger webhook
                     */
-                    console.log('Button field', 'Trigger webhook', this.url);
-                    this.isLoading = true;
-                    fetch( this.url )
-                        .then((response) => response.json())
-                        .then((data) => {
-                            this.isLoading = false;
-                            console.log('Button field', 'Webhook successfully triggered', data)
-                        });
+                    triggerWebhook( this );
                 }
             }
         }

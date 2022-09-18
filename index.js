@@ -1,5 +1,20 @@
 (function() {
   "use strict";
+  function openUrlInNewTab(field) {
+    console.log("Button field", field.label, field.url);
+    window.open(field.url, "_blank");
+  }
+  function triggerWebhook(field) {
+    console.log("Button field", field.label, field.url);
+    field.isLoading = true;
+    fetch(field.url).then((response) => response.json()).then((data) => {
+      field.isLoading = false;
+      console.log("Button field", "Webhook successfully triggered", data);
+    }).catch((error) => {
+      field.hasError = true;
+      console.error("Button field", "Error", error);
+    });
+  }
   const ButtonField_vue_vue_type_style_index_0_lang = "";
   function normalizeComponent(scriptExports, render, staticRenderFns, functionalTemplate, injectStyles, scopeId, moduleIdentifier, shadowMode) {
     var options = typeof scriptExports === "function" ? scriptExports.options : scriptExports;
@@ -63,27 +78,22 @@
       theme: String,
       icon: String,
       open: Boolean,
-      isLoading: true
+      isLoading: true,
+      hasError: false
     },
     methods: {
       async onClick() {
         if (this.open === true) {
-          console.log("Button field", "Open link in new tab", this.url);
-          window.open(this.url, "_blank");
+          openUrlInNewTab(this);
         } else {
-          console.log("Button field", "Trigger webhook", this.url);
-          this.isLoading = true;
-          fetch(this.url).then((response) => response.json()).then((data) => {
-            this.isLoading = false;
-            console.log("Button field", "Webhook successfully triggered", data);
-          });
+          triggerWebhook(this);
         }
       }
     }
   };
   var _sfc_render$1 = function render() {
     var _vm = this, _c = _vm._self._c;
-    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("div", { staticClass: "k-button-field-button-wrapper" }, [!_vm.isLoading ? _c("button", { staticClass: "k-button-field-button k-button k-box", attrs: { "type": "button", "data-theme": _vm.theme }, on: { "click": _vm.onClick } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": _vm.icon } }), _c("span", { staticClass: "k-button-text" }, [_vm._v(_vm._s(_vm.text))])], 1) : _vm._e(), _vm.isLoading ? _c("div", { staticClass: "k-button-field-button k-button k-button-disabled k-box", attrs: { "type": "button", "data-disabled": "true" } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": "dots" } }), _c("span", { staticClass: "k-button-text" }, [_vm._v("Please wait")])], 1) : _vm._e()])]);
+    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("div", { staticClass: "k-button-field-button-wrapper" }, [!_vm.isLoading ? _c("button", { staticClass: "k-button-field-button k-button k-box", attrs: { "type": "button", "data-theme": _vm.theme }, on: { "click": _vm.onClick } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": _vm.icon } }), _c("span", { staticClass: "k-button-text" }, [_vm._v(_vm._s(_vm.text))])], 1) : _vm._e(), _vm.isLoading && !_vm.hasError ? _c("div", { staticClass: "k-button-field-button k-button k-button-disabled k-box", attrs: { "type": "button", "data-disabled": "true" } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": "dots" } }), _c("span", { staticClass: "k-button-text" }, [_vm._v("Please wait")])], 1) : _vm._e(), _vm.hasError ? _c("div", { staticClass: "k-button-field-button k-button k-button-disabled k-box", attrs: { "type": "button", "data-disabled": "true", "data-theme": "negative" } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": "alert" } }), _c("span", { staticClass: "k-button-text" }, [_vm._v("Error")])], 1) : _vm._e()])]);
   };
   var _sfc_staticRenderFns$1 = [];
   _sfc_render$1._withStripped = true;
