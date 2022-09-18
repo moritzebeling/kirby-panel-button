@@ -3,7 +3,6 @@ p {
     margin-bottom: var(--spacing-2);
 }
 .k-button-field-button {
-    background-color: red;
     display: block;
     width: 100%;
     text-align: left;
