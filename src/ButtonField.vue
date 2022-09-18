@@ -1,5 +1,5 @@
 <template>
-    <k-field class="k-button-field" :label="label">
+    <k-field class="k-button-field" :label="label" :help="help">
 
         <div class="k-button-field-button-wrapper">
 
@@ -36,6 +36,7 @@
             icon: String,
             open: Boolean,
             reload: Boolean,
+            help: String,
             isLoading: true,
             hasError: false
         },

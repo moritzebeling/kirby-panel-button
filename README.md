@@ -11,12 +11,12 @@ This plugin is work in progress and will propably change in the near future. Ple
 **To Do**
 
 - [ ] Refresh page data on success without reloading the whole page
-- [ ] Add all field properties that make sense, e.g. `help`, ...
 - [ ] Add multilang support
 
 **Ideas for version 2**
 
 - [ ] Add a buttons section that allows to add some text and multiple buttons
+- [ ] Option to display result in dialog popup
 
 ## Installation
 

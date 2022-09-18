@@ -84,6 +84,7 @@
       icon: String,
       open: Boolean,
       reload: Boolean,
+      help: String,
       isLoading: true,
       hasError: false
     },
@@ -99,7 +100,7 @@
   };
   var _sfc_render = function render() {
     var _vm = this, _c = _vm._self._c;
-    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("div", { staticClass: "k-button-field-button-wrapper" }, [!_vm.isLoading ? _c("button", { staticClass: "k-button-field-button k-button k-box", attrs: { "type": "button", "data-theme": _vm.theme }, on: { "click": _vm.onClick } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": _vm.icon } }), _c("span", { staticClass: "k-button-text" }, [_vm._v(_vm._s(_vm.text))])], 1) : _vm._e(), _vm.isLoading && !_vm.hasError ? _c("div", { staticClass: "k-button-field-button k-button k-button-disabled k-box", attrs: { "type": "button", "data-disabled": "true" } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": "dots" } }), _c("span", { staticClass: "k-button-text" }, [_vm._v("Please wait")])], 1) : _vm._e(), _vm.hasError ? _c("div", { staticClass: "k-button-field-button k-button k-button-disabled k-box", attrs: { "type": "button", "data-disabled": "true", "data-theme": "negative" } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": "alert" } }), _c("span", { staticClass: "k-button-text" }, [_vm._v("Error")])], 1) : _vm._e()])]);
+    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label, "help": _vm.help } }, [_c("div", { staticClass: "k-button-field-button-wrapper" }, [!_vm.isLoading ? _c("button", { staticClass: "k-button-field-button k-button k-box", attrs: { "type": "button", "data-theme": _vm.theme }, on: { "click": _vm.onClick } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": _vm.icon } }), _c("span", { staticClass: "k-button-text" }, [_vm._v(_vm._s(_vm.text))])], 1) : _vm._e(), _vm.isLoading && !_vm.hasError ? _c("div", { staticClass: "k-button-field-button k-button k-button-disabled k-box", attrs: { "type": "button", "data-disabled": "true" } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": "dots" } }), _c("span", { staticClass: "k-button-text" }, [_vm._v("Please wait")])], 1) : _vm._e(), _vm.hasError ? _c("div", { staticClass: "k-button-field-button k-button k-button-disabled k-box", attrs: { "type": "button", "data-disabled": "true", "data-theme": "negative" } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": "alert" } }), _c("span", { staticClass: "k-button-text" }, [_vm._v("Error")])], 1) : _vm._e()])]);
   };
   var _sfc_staticRenderFns = [];
   _sfc_render._withStripped = true;

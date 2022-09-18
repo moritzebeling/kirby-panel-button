@@ -26,6 +26,9 @@ Kirby::plugin('moritzebeling/kirby-panel-button', [
                 'reload' => function (bool $reload = false) {
                     return $reload;
                 },
+                'help' => function (string $help = null) {
+                    return $help;
+                },
             ]
         ]
     ],
