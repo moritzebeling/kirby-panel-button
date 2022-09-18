@@ -27,6 +27,15 @@ composer require moritzebeling/kirby-panel-button
 git clone https://github.com/moritzebeling/kirby-panel-button site/plugins/kirby-panel-button
 ```
 
+If your plugin requires this plugin:
+```bash
+cd site/plugins/your-plugin
+composer require moritzebeling/kirby-panel-button
+# if you’re in an existing kirby installation
+cd ../../..
+composer update
+```
+
 ## Usage
 
 ```yml
