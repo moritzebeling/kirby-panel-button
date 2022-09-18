@@ -22,7 +22,10 @@ Kirby::plugin('moritzebeling/kirby-panel-button', [
                 },
                 'open' => function (bool $open = false) {
                     return $open;
-                }
+                },
+                'reload' => function (bool $reload = false) {
+                    return $reload;
+                },
             ]
         ]
     ],

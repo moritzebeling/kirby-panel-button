@@ -10,6 +10,11 @@
     fetch(field.url).then((response) => response.json()).then((data) => {
       field.isLoading = false;
       console.log("Button field", "Webhook successfully triggered", data);
+      if (field.reload === true) {
+        setTimeout(() => {
+          location.reload();
+        }, 50);
+      }
     }).catch((error) => {
       field.hasError = true;
       console.error("Button field", "Error", error);
@@ -78,6 +83,7 @@
       theme: String,
       icon: String,
       open: Boolean,
+      reload: Boolean,
       isLoading: true,
       hasError: false
     },

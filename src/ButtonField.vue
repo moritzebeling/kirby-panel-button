@@ -35,6 +35,7 @@
             theme: String,
             icon: String,
             open: Boolean,
+            reload: Boolean,
             isLoading: true,
             hasError: false
         },
