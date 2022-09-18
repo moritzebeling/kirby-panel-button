@@ -1,8 +1,7 @@
 {
   "name": "moritzebeling/kirby-panel-button",
-  "description": "Button field to trigger a webhook",
+  "description": "Kirby panel button field to open or trigger some URL or webhook",
   "homepage": "https://github.com/moritzebeling/kirby-panel-button",
-  "version": "0.0.1",
   "license": "MIT",
   "type": "kirby-plugin",
   "require": {
