@@ -13,6 +13,7 @@ This plugin is work in progress and will propably change in the near future. Ple
 - [ ] Refresh page data after successfull trigger
 - [ ] Add all field properties that make sense, e.g. `help`, ...
 - [ ] Add multilang support
+- [ ] Make available with composer
 
 **Ideas for version 2**
 
@@ -24,7 +25,7 @@ This plugin is work in progress and will propably change in the near future. Ple
 myLinkButton:
   type: button
   label: Open URL in new tab
-  text: Open
+  text: Open # Button text
   url: https://example.com
   icon: edit
   open: true # open URL in new tab
