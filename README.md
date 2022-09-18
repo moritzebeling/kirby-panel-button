@@ -13,7 +13,6 @@ This plugin is work in progress and will propably change in the near future. Ple
 - [ ] Refresh page data after successfull trigger
 - [ ] Add all field properties that make sense, e.g. `help`, ...
 - [ ] Add multilang support
-- [ ] Make available with composer
 
 **Ideas for version 2**
 
@@ -21,7 +20,9 @@ This plugin is work in progress and will propably change in the near future. Ple
 
 ## Installation
 
-Hopefully available through composer soon. Until then, just clone this repo to your plugin folder
+```
+composer require moritzebeling/kirby-panel-button
+```
 
 ```
 git clone https://github.com/moritzebeling/kirby-panel-button site/plugins/kirby-panel-button
