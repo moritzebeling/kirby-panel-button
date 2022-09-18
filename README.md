@@ -19,6 +19,14 @@ This plugin is work in progress and will propably change in the near future. Ple
 
 - [ ] Add a buttons section that allows to add some text and multiple buttons
 
+## Installation
+
+Hopefully available through composer soon. Until then, just clone this repo to your plugin folder
+
+```
+git clone https://github.com/moritzebeling/kirby-panel-button site/plugins/kirby-panel-button
+```
+
 ## Usage
 
 ```yml
