@@ -10,7 +10,7 @@ export function triggerWebhook( field ){
         .then((response) => response.json())
         .then((data) => {
             field.isLoading = false;
-            console.log('Button field', 'Webhook successfully triggered', data)
+            console.log('Button field', 'Webhook successfully triggered', data);
         })
         .catch((error) => {
             field.hasError = true;

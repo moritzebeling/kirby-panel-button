@@ -70,7 +70,7 @@
       options
     };
   }
-  const _sfc_main$1 = {
+  const _sfc_main = {
     props: {
       label: String,
       text: String,
@@ -91,45 +91,9 @@
       }
     }
   };
-  var _sfc_render$1 = function render() {
-    var _vm = this, _c = _vm._self._c;
-    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("div", { staticClass: "k-button-field-button-wrapper" }, [!_vm.isLoading ? _c("button", { staticClass: "k-button-field-button k-button k-box", attrs: { "type": "button", "data-theme": _vm.theme }, on: { "click": _vm.onClick } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": _vm.icon } }), _c("span", { staticClass: "k-button-text" }, [_vm._v(_vm._s(_vm.text))])], 1) : _vm._e(), _vm.isLoading && !_vm.hasError ? _c("div", { staticClass: "k-button-field-button k-button k-button-disabled k-box", attrs: { "type": "button", "data-disabled": "true" } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": "dots" } }), _c("span", { staticClass: "k-button-text" }, [_vm._v("Please wait")])], 1) : _vm._e(), _vm.hasError ? _c("div", { staticClass: "k-button-field-button k-button k-button-disabled k-box", attrs: { "type": "button", "data-disabled": "true", "data-theme": "negative" } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": "alert" } }), _c("span", { staticClass: "k-button-text" }, [_vm._v("Error")])], 1) : _vm._e()])]);
-  };
-  var _sfc_staticRenderFns$1 = [];
-  _sfc_render$1._withStripped = true;
-  var __component__$1 = /* @__PURE__ */ normalizeComponent(
-    _sfc_main$1,
-    _sfc_render$1,
-    _sfc_staticRenderFns$1,
-    false,
-    null,
-    null,
-    null,
-    null
-  );
-  __component__$1.options.__file = "/Users/moritzebeling/WORK/kirby-shopify-test/site/plugins/kirby-panel-button/src/ButtonField.vue";
-  const ButtonField = __component__$1.exports;
-  const ButtonSection_vue_vue_type_style_index_0_lang = "";
-  const _sfc_main = {
-    data: function() {
-      return {
-        headline: null,
-        text: null,
-        button: null,
-        url: null,
-        theme: null,
-        icon: null
-      };
-    },
-    created: function() {
-      this.load().then((response) => {
-        this.headline = response.headline, this.text = response.text, this.button = response.button, this.url = response.url, this.theme = response.theme, this.icon = response.icon;
-      });
-    }
-  };
   var _sfc_render = function render() {
     var _vm = this, _c = _vm._self._c;
-    return _c("k-field", { staticClass: "k-button-section", attrs: { "label": _vm.headline } }, [_c("div", { staticClass: "k-box", attrs: { "data-theme": _vm.theme } }, [_vm.text ? _c("p", [_vm._v(_vm._s(_vm.text))]) : _vm._e(), _c("k-button", { attrs: { "icon": _vm.icon } }, [_vm._v(_vm._s(_vm.button))])], 1)]);
+    return _c("k-field", { staticClass: "k-button-field", attrs: { "label": _vm.label } }, [_c("div", { staticClass: "k-button-field-button-wrapper" }, [!_vm.isLoading ? _c("button", { staticClass: "k-button-field-button k-button k-box", attrs: { "type": "button", "data-theme": _vm.theme }, on: { "click": _vm.onClick } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": _vm.icon } }), _c("span", { staticClass: "k-button-text" }, [_vm._v(_vm._s(_vm.text))])], 1) : _vm._e(), _vm.isLoading && !_vm.hasError ? _c("div", { staticClass: "k-button-field-button k-button k-button-disabled k-box", attrs: { "type": "button", "data-disabled": "true" } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": "dots" } }), _c("span", { staticClass: "k-button-text" }, [_vm._v("Please wait")])], 1) : _vm._e(), _vm.hasError ? _c("div", { staticClass: "k-button-field-button k-button k-button-disabled k-box", attrs: { "type": "button", "data-disabled": "true", "data-theme": "negative" } }, [_c("k-icon", { staticClass: "k-button-icon", attrs: { "type": "alert" } }), _c("span", { staticClass: "k-button-text" }, [_vm._v("Error")])], 1) : _vm._e()])]);
   };
   var _sfc_staticRenderFns = [];
   _sfc_render._withStripped = true;
@@ -143,14 +107,11 @@
     null,
     null
   );
-  __component__.options.__file = "/Users/moritzebeling/WORK/kirby-shopify-test/site/plugins/kirby-panel-button/src/ButtonSection.vue";
-  const ButtonSection = __component__.exports;
+  __component__.options.__file = "/Users/moritzebeling/WORK/kirby-shopify-test/site/plugins/kirby-panel-button/src/ButtonField.vue";
+  const ButtonField = __component__.exports;
   panel.plugin("moritzebeling/panel-button", {
     fields: {
       button: ButtonField
-    },
-    sections: {
-      button: ButtonSection
     }
   });
 })();
