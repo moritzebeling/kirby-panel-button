@@ -43,7 +43,7 @@ myLinkButton:
   type: button
   label: Open URL in new tab
   text: Open # Button text
-  url: https://example.com
+  url: "https://example.com/{{ page.slug }}"
   icon: edit
   open: true # open URL in new tab
 
