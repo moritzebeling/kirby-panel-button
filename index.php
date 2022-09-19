@@ -29,7 +29,21 @@ Kirby::plugin('moritzebeling/kirby-panel-button', [
                 'help' => function (string $help = null) {
                     return $help;
                 },
-            ]
+            ],
+            'computed' => [
+                'text' => function () {
+                    if( $text = $this->text ){
+                        $text = $this->model()->toSafeString($text);
+                        return $text;
+                    }
+                },
+                'url' => function () {
+                    if( $url = $this->url ){
+                        $url = $this->model()->toSafeString($url);
+                        return $url;
+                    }
+                }
+            ],
         ]
     ],
 
