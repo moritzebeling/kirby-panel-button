@@ -2,25 +2,13 @@
 
 <img width="100%" height="auto" alt="Kirby CMS button field to open URLs in a new tab or trigger webhooks" src="screenshot.png" />
 
-Custom Kirby Panel field, that displays a button that can be used to either open a URL in a new tab or to trigger some url or webhook and wait for success or error.
-
-## 🚧 Work in progress
-
-This plugin is work in progress and will propably change in the near future. Please use only at own risk. If you have ideas for improvement or encountered any problems, please let me know.
-
-**To Do**
-
-- [ ] Add multilang support
-
-**Ideas for version 2**
-
-- [ ] Add a buttons section that allows to add some text and multiple buttons
-- [ ] Option to display result in dialog popup
+Custom Kirby Panel field, that displays a button that can be used to either open a URL in a new tab or to trigger some url or webhook and wait for success or error. This can be very helpful, when the you have content that can be viewed or edited on some external service or domain.
 
 ## Installation
 
 ```
 composer require moritzebeling/kirby-panel-button
+composer update moritzebeling/kirby-panel-button
 ```
 
 ```
@@ -62,6 +50,12 @@ myWebhookButton:
 npm run dev
 ```
 
-## License
+## 🚧 Work in progress
+This plugin comes without any warranty and was not widely tested. Use it at your own risk. If you encounter any problems or have ideas for future development, please submit an issue or pull request.
 
-MIT
+**Ideas for future development**
+
+- [ ] Add multilang support
+- [ ] Refactor and simplify yml field configuration
+- [ ] Add a buttons section that allows to add some text and multiple buttons
+- [ ] Option to display result in dialog popup
