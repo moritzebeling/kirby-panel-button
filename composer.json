@@ -1,34 +1,42 @@
 {
-  "name": "moritzebeling/kirby-panel-button",
-  "description": "Kirby panel button field to open or trigger some URL or webhook",
-  "homepage": "https://github.com/moritzebeling/kirby-panel-button",
-  "license": "MIT",
-  "type": "kirby-plugin",
-  "require": {
-    "php": ">=7.4.0",
-    "getkirby/composer-installer": "^1.1"
-  },
-  "authors": [
-    {
-      "name": "Moritz Ebeling",
-      "homepage": "https://moritzebeling.com"
-    }
-  ],
-  "keywords": [
-    "kirby",
-    "plugin",
-    "button",
-    "field",
-    "blueprint",
-    "panel",
-    "webhook",
-    "trigger",
-    "kirby-plugin",
-    "kirby-cms",
-    "php"
-  ],
-  "support": {
-    "issues": "https://github.com/moritzebeling/kirby-panel-button/issues",
-    "source": "https://github.com/moritzebeling/kirby-panel-button"
-  }
+    "name": "moritzebeling/kirby-panel-button",
+    "description": "Kirby panel button field to open or trigger some URL or webhook",
+    "version": "1.0.0",
+    "type": "kirby-plugin",
+    "homepage": "https://github.com/moritzebeling/kirby-panel-button",
+    "time": "2023-01-23",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Moritz Ebeling",
+            "homepage": "https://moritzebeling.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/moritzebeling/kirby-panel-button/issues",
+        "source": "https://github.com/moritzebeling/kirby-panel-button",
+        "docs": "https://github.com/moritzebeling/kirby-panel-button"
+    },
+    "funding": [
+        {
+            "type": "paypal",
+            "url": "https://www.paypal.com/paypalme/cryptomunich"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "getkirby/composer-installer": "^1.1"
+    },
+    "keywords": [
+        "php",
+        "kirby",
+        "plugin",
+        "kirby-plugin",
+        "kirby-cms",
+        "button",
+        "field",
+        "panel",
+        "webhook",
+        "trigger"
+    ]
 }

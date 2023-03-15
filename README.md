@@ -1,27 +1,23 @@
-# Kirby Panel Button
+# Kirby Panel Button Plugin
 
 <img width="100%" height="auto" alt="Kirby CMS button field to open URLs in a new tab or trigger webhooks" src="screenshot.png" />
 
-Custom Kirby Panel field, that displays a button that can be used to either open a URL in a new tab or to trigger some url or webhook and wait for success or error. This can be very helpful, when the you have content that can be viewed or edited on some external service or domain.
+Custom Kirby Panel field, that displays a button that can be used to either open a URL in a new tab or to trigger some url or webhook and wait for success or error. This can be very helpful, when you have content that can be viewed or edited on some external service or domain.
 
 ## Installation
 
-```
+```bash
 composer require moritzebeling/kirby-panel-button
 composer update moritzebeling/kirby-panel-button
 ```
 
-```
-git clone https://github.com/moritzebeling/kirby-panel-button site/plugins/kirby-panel-button
-```
+Or download/clone this repo into `site/plugins` of your Kirby project.
 
-If your plugin requires this plugin:
+If you’re working on a plugin which requires this plugin:
+
 ```bash
 cd site/plugins/your-plugin
 composer require moritzebeling/kirby-panel-button
-# if you’re in an existing kirby installation
-cd ../../..
-composer update
 ```
 
 ## Usage
@@ -44,18 +40,29 @@ myWebhookButton:
   reload: true # trigger a page refresh on success to display updated data
 ```
 
-## Development
+## 🚧 Development
+
+1. Install yourself a fresh Kirby StarterKit
+2. `cd site/plugins`
+3. `git clone` this repo
+4. `cd` into this plugin folder
 
 ```
 npm run dev
 ```
 
-## 🚧 Work in progress
-This plugin comes without any warranty and was not widely tested. Use it at your own risk. If you encounter any problems or have ideas for future development, please submit an issue or pull request.
-
-**Ideas for future development**
-
+Roadmap
 - [ ] Add multilang support
 - [ ] Refactor and simplify yml field configuration
 - [ ] Add a buttons section that allows to add some text and multiple buttons
 - [ ] Option to display result in dialog popup
+
+## ☕️ Support
+
+If you like this plugin, I would be glad if you would invite me for a coffee: [PayPal](https://www.paypal.com/paypalme/cryptomunich)
+
+If you have any ideas for further development or stumble upon any problems, please open an issue or PR. Thank you!
+
+## Warranty
+
+This plugin is work in progress and comes without any warranty. Use at your own risk.
