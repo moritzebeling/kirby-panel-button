@@ -59,7 +59,7 @@ Roadmap
 
 ## ☕️ Support
 
-If you like this plugin, I would be glad if you would invite me on a coffee via [PayPal](https://www.paypal.com/paypalme/cryptomunich)
+If you like this plugin, I would be glad if you would invite me for a coffee via [PayPal](http://more.moritzebeling.com/support)
 If you have any ideas for further development or stumble upon any problems, please open an issue or PR. Thank you!
 
 ## Warranty
