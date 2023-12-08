@@ -1,73 +1,79 @@
 <template>
-    <k-field class="k-button-field" :label="label" :help="help">
+  <k-field class="k-button-field" :label="label" :help="help">
+    <div class="k-button-field-button-wrapper">
+      <k-button
+          v-if="!isLoading"
+          :theme="theme"
+          :icon="icon"
+          variant="filled"
+          @click="onClick"
+      >
+        {{ text }}
+      </k-button>
 
-        <div class="k-button-field-button-wrapper">
+      <k-button
+          v-if="isLoading && !hasError"
+          :disabled="true"
+          icon="dots"
+          theme="info"
+          variant="filled"
+          data-disabled="true"
+      >
+        Please wait
+      </k-button>
 
-            <button v-if="!isLoading" type="button" class="k-button-field-button k-button k-box" :data-theme="theme" @click="onClick">
-                <k-icon :type="icon" class="k-button-icon" />
-                <span class="k-button-text">{{ text }}</span>
-            </button>
-            
-            <div v-if="isLoading && !hasError" type="button" class="k-button-field-button k-button k-button-disabled k-box" data-disabled="true">
-                <k-icon type="dots" class="k-button-icon" />
-                <span class="k-button-text">Please wait</span>
-            </div>
-            
-            <div v-if="hasError" type="button" class="k-button-field-button k-button k-button-disabled k-box" data-disabled="true" data-theme="negative">
-                <k-icon type="alert" class="k-button-icon" />
-                <span class="k-button-text">Error</span>
-            </div>
-
-        </div>
-            
-    </k-field>
+      <k-button
+          v-if="hasError"
+          :disabled="true"
+          icon="alert"
+          theme="negative"
+          variant="filled"
+          @click="onClick"
+      >
+        Error
+      </k-button>
+    </div>
+  </k-field>
 </template>
 
 <script>
+import {openUrlInNewTab, triggerWebhook} from "./methods";
 
-    import { openUrlInNewTab, triggerWebhook } from "./methods";
-
-    export default {
-        props: {
-            label: String,
-            text: String,
-            url: String,
-            theme: String,
-            icon: String,
-            open: Boolean,
-            reload: Boolean,
-            help: String,
-            isLoading: true,
-            hasError: false
-        },
-        methods: {
-            async onClick(){
-                if( this.open === true ){
-                    /*
-                    open url in new tab
-                    */
-                    openUrlInNewTab( this );
-                } else {
-                    /*
-                    trigger webhook
-                    */
-                    triggerWebhook( this );
-                }
-            }
-        }
+export default {
+  props: {
+    label: String,
+    text: String,
+    url: String,
+    theme: String,
+    icon: String,
+    open: Boolean,
+    reload: Boolean,
+    help: String,
+    isLoading: true,
+    hasError: false
+  },
+  methods: {
+    async onClick() {
+      if (this.open === true) {
+        /*
+        open url in new tab
+        */
+        openUrlInNewTab(this);
+      } else {
+        /*
+        trigger webhook
+        */
+        triggerWebhook(this);
+      }
     }
+  }
+}
 </script>
 
 <style>
-
-    p {
-        margin-bottom: var(--spacing-2);
-    }
-
-    .k-button-field-button {
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-
+.k-button-field button {
+  width: 100%;
+  text-align: start;
+  justify-content: start;
+}
 </style>
