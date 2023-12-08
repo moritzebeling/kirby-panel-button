@@ -1,1 +1,1 @@
-p{margin-bottom:var(--spacing-2)}.k-button-field-button{display:block;width:100%;text-align:left}
+[dir=ltr] .k-button-field button{text-align:left}[dir=rtl] .k-button-field button{text-align:right}.k-button-field button{width:100%;justify-content:start}

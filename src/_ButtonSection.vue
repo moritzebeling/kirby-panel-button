@@ -1,11 +1,8 @@
 <template>
     <k-field class="k-button-section" :label="headline">
         <div class="k-box" :data-theme="theme">
-
             <p v-if="text">{{text}}</p>
-
             <k-button :icon="icon">{{ button }}</k-button>
-            
         </div>
     </k-field>
 </template>
@@ -36,9 +33,7 @@
 </script>
 
 <style>
-
     p {
         margin-bottom: var(--spacing-2);
     }
-
 </style>

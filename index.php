@@ -3,7 +3,6 @@
 use Kirby\Cms\App as Kirby;
 
 Kirby::plugin('moritzebeling/kirby-panel-button', [
-
     'fields' => [
         'button' => [
             'props' => [
